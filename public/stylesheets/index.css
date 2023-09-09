@@ -1,0 +1,17 @@
+
+
+.outer-box{
+  display: flex;
+  justify-content: center; /* Horizontal centering */
+  align-items: center; /* Vertical centering */
+  height: 90vh; /* 100% of the viewport height */
+}
+
+.box{
+  display: flex;
+  justify-content: center; /* Horizontal centering */
+  align-items: center;
+  height: 150px;
+  width: 300px;
+  background-color: aliceblue;
+}

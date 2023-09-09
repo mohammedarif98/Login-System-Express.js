@@ -1,0 +1,78 @@
+
+
+{{#> layout pageTitle="Home"}}
+<header class="header">
+    <nav class="navbar navbar-expand-sm navbar-dark navbar-custom">
+        <div class="container">
+          <a class="navbar-brand" href="javascript:void(0)">B L O G</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="mynavbar">
+            <ul class="navbar-nav mx-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="javascript:void(0)">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="">Contact Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="javascript:void(0)">About Us</a>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <button class="login-btn btn btn-light border border-dark border-1 rounded-0" type="button" style="width: 120px;">LogIn</button>
+            </form>
+          </div>
+        </div>
+    </nav>
+</header>
+<!--//* popup form -->
+<div class="blur-bg-overlay"></div>
+<div class="form-popup">
+  <span class="close-btn meterial-symbols-rounded"><i class="fa-regular fa-circle-xmark"></i></span>
+    <div class="form-box">
+        <div class="form-details">
+            <!-- <h2>welcome</h2> -->
+            <!-- <p>wertretwtertrtretretr</p> -->
+        </div>
+
+        <div class="form-content">
+            <h2>Login</h2>
+              <form action="/login" method="post" id="loginForm">
+                <div class="input-field">
+                    <input type="email" id="email" name="email" value="" >
+                    <label for="">Email</label>
+                    <div class="error text-danger ms-2"></div>
+                </div>
+                <div class="input-field">
+                  <input type="password" id="password" name="password" value="" >
+                  <label for="">Password</label>
+                  <div class="error text-danger ms-2"></div>
+              </div>
+              <a href="" class="forgot-pass">Forgot password ?</a>
+              <button type="submit">log in</button>
+              </form>
+
+              {{#if messages.error}}
+                {{#if messages.error.length}}
+                <div class="error-message h5 text-danger fw-600">
+                  {{messages.error}}
+                </div>
+                {{/if}}
+              {{/if}}
+
+              {{#if messages.success}}
+                {{#if messages.success.length}}
+                <div class="success-message h5 text-danger fw-600">
+                  {{messages.success}}
+                </div>
+                {{/if}}
+              {{/if}}
+        </div>
+    </div>
+</div>
+{{/layout}}
+
+<script src="/javascripts/validate.js"></script>
+

@@ -1,0 +1,39 @@
+{{#> layout pageTitle="Home"}}
+
+<header class="header">
+    <nav class="navbar navbar-expand-sm navbar-dark navbar-custom">
+        <div class="container">
+          <a class="navbar-brand" href="javascript:void(0)">B L O G</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="mynavbar">
+            <ul class="navbar-nav mx-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="javascript:void(0)">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/about">Contact Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="javascript:void(0)">About Us</a>
+              </li>
+            </ul>
+              <button class="login-btn btn btn-light border border-dark border-1 rounded-0" type="button" style="width: 120px;">
+                <a class="text-decoration-none text-dark" href="/logout" role="button">LogOut</a>
+              </button>
+          </div>
+        </div>
+    </nav>
+</header>
+
+
+
+<div class="container outer-box">
+    <div class = "box d-flex-column text-center mt-5">
+        <p>You are logged on to <span class="text-primary">{{email}}</span></p>
+    </div>
+</div>
+
+
+{{/layout}}
